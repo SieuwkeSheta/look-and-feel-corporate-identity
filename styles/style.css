@@ -224,3 +224,204 @@ nav {
         }
     }
 }
+
+/* Welkom sectie op home-pagina */
+.welcome-home-page {
+    background-image: 
+    linear-gradient(rgba(17, 17, 17, 0.137)),
+    url("https://sieuwkesheta.github.io/all-human-accessible-website/assets/top-view-desk.jpg");
+    background-color: black;
+    background-repeat: no-repeat;
+    background-position:right;
+    background-size: cover;
+    
+    color: var(--white-color);
+    padding: 1em;
+    text-align: center;
+    
+
+    & h1 {
+        font-size: var(--font-size-heading-l);
+        margin: 0;
+        padding: 1em 0 0.2em;
+    }
+
+    & h2 {
+        margin: 0;
+        padding: 2.5em 0 0.2em;
+        font-size: var(--font-size-heading-s) ;
+    }
+
+    & p {
+        font-size: var(--font-size-m);
+
+    }
+
+    & ul {
+        display: grid;
+        justify-content: center;
+        text-align: left;
+        padding: 1em;
+        line-height: 2em;
+        font-size: medium;
+        font-weight: 500;
+        margin: 0 0 0.3em;
+        padding: 0 0 1em;
+        list-style: none;
+
+        & svg {
+            fill:#ffffff;
+            width: 1.5em;
+            margin-right: 0.5em;
+        }
+    }
+
+    /* 'Lees meer'-knop */
+    & .MeerNieuws-ad {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0);
+
+        text-decoration: none;
+
+    }
+}
+
+.target-groups {
+    margin: 5em 1em;
+    padding: 1em;
+    background-color: var(--primary-color);
+    border-radius: 10px;
+
+    @media (min-width: 600px) {
+        margin: 5em 3em;
+    }
+
+    @media (min-width: 750px) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @media (min-width: 900px) {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    & h2 {
+        margin: 0;
+        color: var(--white-color);
+        margin-bottom: 0.5em;
+        font-size: var(--font-size-heading-s);
+
+        @media (min-width:750px) {
+            grid-column: 1/-1;
+        }
+    }
+
+    & p {
+        display: flex;
+        align-items:center;
+        gap: 0.5em;
+        background-color: #ffffff;
+        margin: 0;
+        padding: 0.5em;
+        border-bottom: 1px solid grey;
+        font-size: var(--font-size-s);
+
+        @media (min-width: 700px) {
+            border-left: 1px solid grey;
+        }
+        
+        @media (min-width: 900px) {
+            display: grid;
+            justify-content: center;
+            text-align: center;
+            padding: 1em;
+        }
+    }
+    
+    & svg {
+        width: 2.5em;
+
+        @media (min-width: 900px) {
+            width: 4em;
+            margin: auto;
+        }
+    }
+}
+
+
+footer {
+    background-color: var(--primary-color);
+    margin-top: 1em;
+    padding-top: 1em;
+    text-align: center;
+
+    @media (min-width: 700px) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 5em;
+    }
+    
+
+    & h2 {
+        text-align: left;
+        color: #ffffff;
+        margin: 0 0 0.5em 0;
+        font-size: var(--font-size-heading-s);
+    }
+
+    & .platform-ad {
+        padding: 1.5em;
+        text-align: left;
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+    }
+
+    & a {
+        line-height: 1.5em;
+        color: #ffffff;
+        text-decoration: none;
+        font-size: var(--font-size-l);
+
+        &:hover {
+            text-decoration: 2px underline;
+            text-underline-offset: 5px;
+            text-decoration-color: #ffffff;
+        }
+
+        &:active {
+            color: var(--primary-lighter-color);
+            text-decoration-color: var(--primary-lighter-color);
+        }
+    }
+
+    /* Logo Platform Ad */
+    & svg {
+        margin-bottom: 2em;
+
+        @media (min-width: 700px) {
+            grid-row: 2;
+            grid-column: 1/-1;
+            margin: auto;
+        }
+    }
+
+    /* Copyright */
+    & p {
+        background-color: #ffffff;
+        padding: 0.8em;
+        text-align: center;
+        font-size: var(--font-size-s);
+
+        @media (min-width: 700px) {
+            grid-row: 3;
+            grid-column: 1/-1;
+        }
+    }
+}
+
