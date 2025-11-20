@@ -425,3 +425,32 @@ footer {
     }
 }
 
+/* Contact pagina */
+
+.contact-form {
+    background-color: var(--primary-color);
+    padding: 1em;
+
+    & h2 {
+        font-size: var(--font-size-heading-s);
+        color: var(--white-color);
+    }
+
+    .contact-form-inside {
+        margin: 0.5em 1em 1em;
+        display: grid;
+        gap: 1em;
+
+        max-width: 35em;
+        
+        background-color: var(--white-color);
+        border-radius: 5px;
+        padding: 1em;
+        
+        & .submit-button {
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+}
