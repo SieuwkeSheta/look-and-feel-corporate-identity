@@ -14,7 +14,16 @@ html {
 
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+:root {
+    /* 'Lees meer'-knop */
+    .MeerNieuws-ad {
+        text-decoration: none;
 
+        &:hover {
+            outline: 2px solid var(--primary-color);
+        }
+    }
+}
 header {
     position:relative;
     z-index: 10;
@@ -287,9 +296,6 @@ nav {
         position: absolute;
         left: 50%;
         transform: translate(-50%, 0);
-
-        text-decoration: none;
-
     }
 }
 
@@ -364,6 +370,7 @@ nav {
             
             &:active {
                 color: var(--accent-color);
+    & .MeerNieuws-ad {
 
 footer {
     background-color: var(--primary-color);
