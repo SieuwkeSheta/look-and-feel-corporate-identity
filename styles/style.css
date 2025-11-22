@@ -123,19 +123,13 @@ nav {
             } 
         }
 
-        :hover {
+        &:hover, &:active {
             cursor: pointer;
             border: 0.1em solid var(--primary-color);
             padding: 0.1em;
             border-radius: 3px;
         }
 
-        :active {
-            cursor: pointer;
-            background-color: var(--primary-lighter-color);
-            padding: 0.2em;
-            border-radius: 3px;
-        }
     }
 
     /* Navigatie menu naar andere pagina's op de website */
