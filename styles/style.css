@@ -473,6 +473,11 @@ footer {
             display: flex;
             justify-content: center;
         }
+
+        textarea {
+            resize: none;
+            height: 5em;
+        }
     }
 
 }
