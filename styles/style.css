@@ -263,7 +263,6 @@ nav {
     
 
     & h1 {
-        font-size: var(--font-size-heading-l);
         margin: 0;
         padding: 1em 0 0.2em;
     }
@@ -271,12 +270,6 @@ nav {
     & h2 {
         margin: 0;
         padding: 2.5em 0 0.2em;
-        font-size: var(--font-size-heading-s) ;
-    }
-
-    & p {
-        font-size: var(--font-size-m);
-
     }
 
     & ul {
@@ -332,7 +325,6 @@ nav {
         margin: 0;
         color: var(--white-color);
         margin-bottom: 0.5em;
-        font-size: var(--font-size-heading-s);
 
         @media (min-width:750px) {
             grid-column: 1/-1;
@@ -347,7 +339,6 @@ nav {
         margin: 0;
         padding: 0.5em;
         border-bottom: 1px solid grey;
-        font-size: var(--font-size-s);
 
         @media (min-width: 700px) {
             border-left: 1px solid grey;
@@ -389,7 +380,6 @@ footer {
         text-align: left;
         color: #ffffff;
         margin: 0 0 0.5em 0;
-        font-size: var(--font-size-heading-s);
     }
 
     & .platform-ad {
@@ -408,7 +398,6 @@ footer {
         line-height: 1.5em;
         color: #ffffff;
         text-decoration: none;
-        font-size: var(--font-size-l);
 
         &:hover {
             text-decoration: 2px underline;
@@ -438,7 +427,6 @@ footer {
         background-color: #ffffff;
         padding: 0.8em;
         text-align: center;
-        font-size: var(--font-size-s);
 
         @media (min-width: 700px) {
             grid-row: 3;
@@ -454,7 +442,6 @@ footer {
     padding: 1em;
 
     & h2 {
-        font-size: var(--font-size-heading-s);
         color: var(--white-color);
     }
 
