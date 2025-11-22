@@ -360,6 +360,16 @@ nav {
     }
 }
 
+/* Laatste-nieuws sectie op home-pagina */
+.latest-news {
+    background-color: var(--primary-color);
+    padding: 1.5em;
+
+    & h2 {
+        text-align: center;
+        padding-bottom: 1em;
+        
+
         & a {
             color: var(--white-color);
             text-underline-offset: 4px;
@@ -371,7 +381,80 @@ nav {
             
             &:active {
                 color: var(--accent-color);
+            }
+        }
+    }
+
+    & ul {
+        list-style: none;
+
+        @media (min-width: 700px) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-auto-rows: max-content;
+            gap: 3em;
+        }
+
+        @media (min-width: 1000px) {
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 2em;
+        }
+    }
+
+    & article {
+        background-color:var(--white-color);
+        margin-bottom: 2em;
+        padding-bottom: 1.5em;
+        text-align: center;
+        border-radius: 10px;
+
+        color: var(--black-color);
+        fill: var(--black-color);
+        height: 100%;
+        box-shadow: 2px 1px 15px rgb(57, 57, 57);
+
+        & img {
+            width: 100%;
+            border-radius: 10px 10px 0 0;
+        }
+
+        & h3 {
+            padding: 1em 2em 0.5em;
+
+        }
+
+        p {
+            padding: 0 2em 2em;
+        }   
+
+    }
+
     & .MeerNieuws-ad {
+
+        
+    }
+
+    /* tweede article */
+    & :nth-of-type(2){
+        img {
+            padding: 2em 0;
+        }
+
+        h3 {
+
+            @media (min-width: 700px) {
+                padding-top: 2em;
+            }
+
+            @media (min-width: 1200px) {
+                padding-top: 3em;
+            }
+
+        }
+    }
+
+}
+
 
 footer {
     background-color: var(--primary-color);
@@ -449,6 +532,7 @@ footer {
 
 .contact-form {
     background-color: var(--primary-color);
+    padding: 1em 2em 2em;
 
     & h2 {
         color: var(--white-color);
