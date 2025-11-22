@@ -25,7 +25,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 0.5em 1em;
-    background-color: #ffffff;
+    background-color: var(--white-color);
     z-index: 10;
     border-bottom: 25px solid var(--primary-color);
 
@@ -132,7 +132,6 @@ nav {
 
         :active {
             cursor: pointer;
-            fill: #ffffff;
             background-color: var(--primary-lighter-color);
             padding: 0.2em;
             border-radius: 3px;
@@ -146,7 +145,7 @@ nav {
         left:0;
         right:0;
 
-        background-color:#ffffff;
+        background-color: var(--white-color);
         margin: 0;
         padding: 1.5em;
         /* Lijst in hamburger menu is niet zichtbaar */
@@ -239,7 +238,6 @@ nav {
         }
 
         & .is-open svg {
-            fill: #ffffff;
             background-color: var(--primary-color);
             padding: 0.2em;
             border-radius: 3px;
@@ -285,7 +283,7 @@ nav {
         list-style: none;
 
         & svg {
-            fill:#ffffff;
+            fill: var(--white-color);
             width: 1.5em;
             margin-right: 0.5em;
         }
@@ -335,7 +333,7 @@ nav {
         display: flex;
         align-items:center;
         gap: 0.5em;
-        background-color: #ffffff;
+        background-color: var(--white-color);
         margin: 0;
         padding: 0.5em;
         border-bottom: 1px solid grey;
@@ -378,7 +376,7 @@ footer {
 
     & h2 {
         text-align: left;
-        color: #ffffff;
+        color: var(--white-color);
         margin: 0 0 0.5em 0;
     }
 
@@ -396,13 +394,13 @@ footer {
 
     & a {
         line-height: 1.5em;
-        color: #ffffff;
+        color: var(--white-color);
         text-decoration: none;
 
         &:hover {
             text-decoration: 2px underline;
             text-underline-offset: 5px;
-            text-decoration-color: #ffffff;
+            text-decoration-color: var(--white-color);
         }
 
         &:active {
@@ -424,7 +422,7 @@ footer {
 
     /* Copyright */
     & p {
-        background-color: #ffffff;
+        background-color: var(--white-color);
         padding: 0.8em;
         text-align: center;
 
