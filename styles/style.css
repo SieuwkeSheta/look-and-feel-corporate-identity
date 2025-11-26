@@ -73,10 +73,13 @@ nav {
 
     /* Zoekbalk */
     & [aria-label="zoekbalk"] {
+        margin-left: auto;
 
+        display: flex;
+        justify-content: end;
+        
         @media (min-width: 700px) {
-            display: flex;
-            justify-content: end;
+            
             margin: 1em 2em;
         }
     
@@ -92,14 +95,19 @@ nav {
             background-repeat: no-repeat;
             background-position:.625em center;
             background-color: transparent;
+            border: 0.15em solid transparent;
+            outline:none;
 
             @media (prefers-reduced-motion:no-preference) {
-	    	    transition:all .2s .3s ease-in, width .5s;
+	    	    transition:
+                    background-position .2s .3s ease-in, 
+                    background-size .2s .3s ease-in, 
+                    width .5s;
 	        }
 
             /* Hover van search-icon */
             &:hover {
-                border: 0.15em solid var(--primary-color);
+                border-color: var(--primary-color);
                 transition: none;
                 cursor: pointer;
             }
@@ -109,13 +117,13 @@ nav {
                 width: 100%;
                 background-size:1em auto;
 	    	    background-position:.875em center;
+                border-color: var(--primary-color);
 
                 @media (prefers-reduced-motion:no-preference) {
                     transition:all .3s, width .5s;
 	    	    }
 
                 &:hover {
-                    border: 0;
                     cursor: text;
                 }
             }
