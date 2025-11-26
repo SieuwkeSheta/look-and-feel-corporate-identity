@@ -132,7 +132,9 @@ nav {
     
     & button {
         background-color: transparent;
-        border: none;
+        outline: none;
+        border: 0.15em solid transparent;
+        padding: 0.3em;
 
         & svg {
             width: 3em;
@@ -144,9 +146,9 @@ nav {
 
         &:hover, &:active {
             cursor: pointer;
-            border: 0.1em solid var(--primary-color);
-            padding: 0.1em;
-            border-radius: 3px;
+            border: 0.15em solid var(--primary-color);
+            border-radius: 5px;
+            
         }
 
     }
@@ -250,10 +252,9 @@ nav {
             display: none;
         }
 
-        & .is-open svg {
-            background-color: var(--primary-color);
-            padding: 0.2em;
-            border-radius: 3px;
+        &.is-open {
+            border: 0.15em solid var(--primary-color);
+            border-radius: 5px;
         }
     }
 }
