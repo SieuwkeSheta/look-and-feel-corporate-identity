@@ -662,9 +662,12 @@ footer {
         border-radius: 5px;
         padding: 1em;
         
-        & .submit-button {
-            display: flex;
-            justify-content: center;
+        .Submit-ad {
+            justify-self:center;
+
+            &:hover {
+                outline: 1px solid var(--accent-color)
+            }
         }
 
         textarea {
