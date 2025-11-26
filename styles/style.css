@@ -86,7 +86,6 @@ nav {
         justify-content: end;
         
         @media (min-width: 700px) {
-            
             margin: 1em 2em;
         }
     
@@ -133,6 +132,10 @@ nav {
                 &:hover {
                     cursor: text;
                 }
+
+                @media (min-width: 800px) {
+                    max-width: 20em;
+                }
             }
         }
     }
@@ -140,10 +143,10 @@ nav {
     & button {
         background-color: transparent;
         outline: none;
-        border: 0.15em solid transparent;
+        border: 0.2em solid transparent;
         padding: 0.3em;
 
-        & svg {
+        & svg { 
             width: 3em;
 
             @media (min-width: 600px) {
@@ -156,6 +159,10 @@ nav {
             border: 0.15em solid var(--primary-color);
             border-radius: 5px;
             
+        }   
+        &:focus {
+            border: 0.2em solid var(--primary-color);
+            border-radius: 5px; 
         }
 
     }
@@ -204,7 +211,10 @@ nav {
 
             @media (min-width: 700px) {
                 color: var(--white-color);
-                font-size: var(--font-size-m);
+            }
+
+            @media (min-width: 800px) {
+                font-size: var(--font-size-l);
             }
         }
 
@@ -291,6 +301,16 @@ nav {
     & h2 {
         margin: 0;
         padding: 2.5em 0 0.2em;
+
+        @media (min-width: 750px) {
+            font-size: var(--font-size-heading-m);
+        }
+    }
+
+    & p {
+        @media (min-width: 750px) {
+            font-size: var(--font-size-l);
+        }
     }
 
     & ul {
@@ -309,6 +329,11 @@ nav {
             width: 1.5em;
             margin-right: 0.5em;
         }
+
+        @media (min-width: 750px) {
+            font-size: var(--font-size-l);
+        }
+
     }
 
     /* 'Lees meer'-knop */
@@ -326,7 +351,7 @@ nav {
     border-radius: 10px;
 
     @media (min-width: 600px) {
-        margin: 5em 3em;
+        margin: 5em 4em;
     }
 
     @media (min-width: 750px) {
@@ -336,6 +361,8 @@ nav {
 
     @media (min-width: 900px) {
         grid-template-columns: 1fr 1fr 1fr 1fr;
+
+        margin: 5em 6em;
     }
 
     & h2 {
@@ -346,6 +373,7 @@ nav {
 
         @media (min-width:750px) {
             grid-column: 1/-1;
+            font-size: var(--font-size-heading-m);
         }
     }
 
@@ -360,6 +388,7 @@ nav {
 
         @media (min-width: 700px) {
             border-left: 1px solid grey;
+            padding: 1em;
         }
         
         @media (min-width: 900px) {
@@ -385,17 +414,38 @@ nav {
     background-color: var(--primary-color);
     padding: 1.5em;
 
+    @media (min-width: 700px) {
+        padding: 1.5em 3em;
+    }
+
+    @media (min-width: 1000px) {
+        padding: 1.5em 4em 3em;
+    }
+
     & h2 {
         text-align: center;
         padding-bottom: 1em;
+
+        @media (min-width: 700px) {
+            font-size: var(--font-size-heading-m);
+        }
         
 
         & a {
             color: var(--white-color);
             text-underline-offset: 4px;
 
+            &::after {
+            content:"";
+            background-image: url(/assets/arrow-right-white.svg);
+            background-repeat: no-repeat;
+            background-position: 0.3em 0.9em;
+            background-size: 0.4em;
+            padding: 0.5em;
+            }
+
             &:hover {
-                color: var(--primary-lighter-color);
+                color: var(--accent-color);
                 text-shadow: 1px 1px 1px rgba(48, 48, 48, 0.395);
             }
             
@@ -427,10 +477,11 @@ nav {
         padding-bottom: 1.5em;
         text-align: center;
         border-radius: 10px;
+        
 
         color: var(--black-color);
         fill: var(--black-color);
-        height: 100%;
+        min-height: 100%;
         box-shadow: 2px 1px 15px rgb(57, 57, 57);
 
         & img {
@@ -457,10 +508,6 @@ nav {
 
         h3 {
 
-            @media (min-width: 700px) {
-                padding-top: 2em;
-            }
-
             @media (min-width: 1200px) {
                 padding-top: 3em;
             }
@@ -472,22 +519,37 @@ nav {
 
 /* Deelnemende hogescholen sectie op home-pagina */
 .participating-colleges {
-    margin: 4em 1em;
+    margin: 4em 0.8em;
 
     & h2 {
         text-align: center;
+
+        @media (min-width: 700px) {
+            font-size: var(--font-size-heading-m);
+        }
 
         & a {
             color: var(--black-color);
             text-underline-offset: 4px;
 
+            &::after {
+            content:"";
+            background-image: url(/assets/arrow-right.svg);
+            background-repeat: no-repeat;
+            background-position: 0.3em 0.9em;
+            background-size: 0.4em;
+            padding: 0.5em;
+
+        }
+
             &:hover {
-                color: var(--primary-lighter-color);
-                text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.395);
+                color: var(--accent-color);
+                
             }
             
             &:active {
                 color: var(--accent-color);
+                text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.395);
             }
         }
     }
@@ -650,6 +712,10 @@ footer {
     color: var(--white-color);
     text-align: center;
     padding: 3em;
+
+    @media (min-width: 1000px) {
+        padding: 6em;
+    }
 }
 
 .nav-on-page {
@@ -658,9 +724,23 @@ footer {
     justify-content: center;
     gap: 0.5em;
 
+    @media (min-width: 700px) {
+        display: flex;
+        gap: 1.5em;
+        padding: 2em;
+    }
+
+    @media (min-width: 900px) {
+        gap: 5em;
+    }
+
     & a {
         font-weight: 700;
         color: var(--black-color);
+
+        @media (min-width: 900px) {
+            font-size: var(--font-size-l);
+        }
 
         &::after {
             content:"";
@@ -684,17 +764,30 @@ footer {
     }
 
 }
+
 .contact-form {
     background-color: var(--primary-color);
     padding: 1em 2em 2em;
 
+    @media (min-width: 900px) {
+        padding: 2em 2em 4em;
+    }
+
+
     & h2 {
         color: var(--white-color);
         margin-bottom: 0.5em;
+        text-align: center;
+        
+        @media (min-width: 900px) {
+            font-size: var(--font-size-heading-m);
+        }
+        
     }
 
     .contact-form-inside {
         display: grid;
+        margin: auto;
         gap: 1em;
 
         max-width: 35em;
@@ -702,12 +795,23 @@ footer {
         background-color: var(--white-color);
         border-radius: 5px;
         padding: 1em;
+
+        & p span {
+            color: red;
+        }
         
         .Submit-ad {
             justify-self:center;
 
             &:hover {
                 outline: 1px solid var(--accent-color)
+            }
+        }
+
+        label {
+            gap: 0.1em;
+            @media (min-width: 900px) {
+                font-size: var(--font-size-m);
             }
         }
 
@@ -722,4 +826,8 @@ footer {
 #daily-management {
     text-align: center;
     padding: 2em;
+
+    @media (min-width: 900px) {
+        font-size: var(--font-size-heading-m);
+    }
 }
