@@ -13,6 +13,13 @@ html {
     }
 
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+    scrollbar-gutter: stable;
+}
+
+html:has(.is-open){
+    /* Zorgt ervoor dat je niet kan scrollen als het hamburger menu open is */
+    overflow: hidden;
 }
 
 :root {
@@ -160,6 +167,8 @@ nav {
         left:0;
         right:0;
 
+        height: calc(100dvh - 6.5em);
+        /* overflow-y: auto; */
         background-color: var(--white-color);
         margin: 0;
         padding: 1.5em;
@@ -169,7 +178,6 @@ nav {
 
         &.is-open {
             /* Lijst in hamburger menu is zichtbaar */
-            height: 100vh;
             width: 90%;
             translate: 0;
         }
@@ -182,6 +190,7 @@ nav {
             translate: 0;
             padding: 0.5em;
             margin: 0;
+            height: auto;
 
             background-color: var(--primary-color);
         }
