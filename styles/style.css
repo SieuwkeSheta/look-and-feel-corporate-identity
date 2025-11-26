@@ -599,6 +599,17 @@ footer {
 
 /* Contact pagina */
 
+.top-contact-page {
+    background-image: url(/assets/person-behind-laptop.jpg);
+    background-color: var(--black-color);
+    background-repeat: no-repeat;
+    background-position:right;
+    background-size: cover;
+
+    color: var(--white-color);
+    text-align: center;
+    padding: 3em;
+}
 .contact-form {
     background-color: var(--primary-color);
     padding: 1em 2em 2em;
