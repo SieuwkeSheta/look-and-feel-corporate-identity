@@ -534,6 +534,37 @@ nav {
     to {translate: -100%;}
 }
 
+/* Losse knop: Back to top */
+.button-to-top {
+    position: sticky;
+    bottom: 10%;
+    left: 95%;
+    margin: 1em;
+
+    background-color:var(--accent-color);
+    fill: var(--white-color);
+    padding: 0.3em 0.5em 0.5em;
+    border-radius: 5px;
+    font-size: var(--font-size-m);
+
+    @media (min-width: 700px) {
+        font-size: var(--font-size-heading-s);
+        padding: 0.2em 0.6em 0.5em;
+    }
+
+    &:hover {
+        background-color: var(--accent-lighter-color);
+        fill: var(--accent-color);
+        outline: 1px solid var(--accent-color);
+    }
+
+    &:active,
+    &:focus {
+        background-color: var(--accent-lighter-color);
+        fill: var(--accent-color);
+        outline: 2px solid var(--accent-color);
+    }
+}
 
 footer {
     background-color: var(--primary-color);
