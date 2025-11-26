@@ -610,6 +610,39 @@ footer {
     text-align: center;
     padding: 3em;
 }
+
+.nav-on-page {
+    padding: 1.5em;
+    display: grid;
+    justify-content: center;
+    gap: 0.5em;
+
+    & a {
+        font-weight: 700;
+        color: var(--black-color);
+
+        &::after {
+            content:"";
+            background-image: url(/assets/arrow-right.svg);
+            background-repeat: no-repeat;
+            background-position: 0.3em 0.9em;
+            background-size: 0.4em;
+            padding: 0.5em;
+
+        }
+
+        &:hover {
+            color: var(--accent-color);
+        }
+
+        &:active {
+            color: var(--accent-color);
+            text-shadow: 1px 1px 1px rgba(48, 48, 48, 0.395);
+
+        }
+    }
+
+}
 .contact-form {
     background-color: var(--primary-color);
     padding: 1em 2em 2em;
