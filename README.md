@@ -1,7 +1,9 @@
 # Ad Connect - Platform Ad
 In sprint 2 hebben we de opdracht gekregen om een website te ontwikkelen voor een opdrachtgever, samen met 2 teams van 1e jaars FDND-studenten en 1 team 2e jaars FDND-studenten. Tijdens deze vierde sprint heb ik mij gericht op het maken, onderhouden en implementeren van een gezamenlijke styleguide, samen met mijn team 'JBLS'. Daarnaast het ontwerpen en bouwen van een contact pagina. 
 
-Voor het maken van een gezamenlijke styleguide hebben we eerst een 'interface iventory' gemaakt, om een overzicht te hebben van alle gebruikte elementen in onze projecten. Daarna hebben we er een styleguide van gemaakt in figma en code. Door de gezamelijke styleguide te gebruiken heb je zelf minder code nodig in je eigen project en worden alle projecten een samenhangend geheel. 
+Voor het maken van een gezamenlijke styleguide hebben we eerst een 'interface iventory' gemaakt, om een overzicht te hebben van alle gebruikte elementen in onze projecten. Daarna hebben we er een styleguide van gemaakt in figma en code. Door de gezamelijke styleguide te gebruiken heb je zelf minder code nodig in je eigen project en worden alle projecten een samenhangend geheel.
+
+Graag zou ik feedback willen op de gebruikte kleuren van de styleguide en de layout van de contact-pagina.
 
 #### Wie is Ad Connect?
 Het landelijk Overlegplatform Associate degrees (hierna: Platform Ad) is opgericht in 2018. 
@@ -57,16 +59,105 @@ Eerst de Home-Pagina voor verschillende apparaten met andere kleurstellingen en 
 <img width="100" alt="image" src="https://github.com/user-attachments/assets/ea97a4bf-42b6-4b6b-9510-2188c582228c" />
 <img width="200"  alt="image" src="https://github.com/user-attachments/assets/3b4aa9e5-3760-4b43-ba6c-4eebae862d4e" />
 
+### Voorbeelden van verandering met de styleguide:
+- Andere buttons, was eerst roze en nu groen:
+<img width="100" alt="image" src="https://github.com/user-attachments/assets/bca89142-50a7-46f7-8630-0acf2b7d54d3" />
+-->
+<img width="120" alt="image" src="https://github.com/user-attachments/assets/cc9fbeb7-031e-4cad-818b-3cf42c4d0507" />
 
 
+- Andere icons, zoals het hamburgermenu en de 'back-to-top'-knop:
+<img width="60" alt="image" src="https://github.com/user-attachments/assets/58e836b8-8a06-49a0-93b2-3fb46d362812" />
+-->
+<img width="60" alt="image" src="https://github.com/user-attachments/assets/05843297-47da-489f-91b2-a13a66f1a864" />
+
+<br>
+
+<img width="60" alt="image" src="https://github.com/user-attachments/assets/936e1153-83cd-45e3-a486-1256e91e0d3e" />
+-->
+<img width="60"  alt="image" src="https://github.com/user-attachments/assets/72783859-6a08-4bcf-8b35-67a607a512db" />
 
 
-
+- Ander lettertype, van 'Arial' naar 'Gill Sans'
+<img width="200" alt="image" src="https://github.com/user-attachments/assets/d9ca3ddf-bc50-4d66-b8e4-6a714fb954b5" />
+-->
+<img width="200" alt="image" src="https://github.com/user-attachments/assets/6cac46a3-9985-4986-bd85-f8b5e1f76368" />
 
 ## Kenmerken
+Ik heb gebruikt gemaakt van HTML, CSS en JS.
+
+### HTML Structuur
+De HTML structuur van de pagina is semantisch opgebouwd, in het engels. De pagina bevat een header met daarin een navigatie `<nav>`, een main voor de inhoud met meerdere secties `<section>` en articles `<article>`, en een footer.
+
+Ik gebruik gemaakt van classes die in de gezamenlijke styleguide staan.
+
+Lees meer knop, mijn HTML met gezamenlijke CSS:
+https://github.com/SieuwkeSheta/look-and-feel-corporate-identity/blob/4884ed567f097e869e62d079b00e3c86c7cf3479/index.html#L125-L131
+
+```CSS
+CSS van gezamenlijke styleguide
+.MeerNieuws-ad {
+  padding: var(--button-size);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: var(--border-radius);
+  font-family: var(--font-family);
+  color: var(--primary-lighter-color);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+
+
+  &:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 0.1em;
+  }
+
+
+  &:active {
+    border: 1px solid var(--primary-color);
+  }
+
+
+  &:hover {
+    background: var(--primary-lighter-color);
+    color: var(--primary-color);
+  }
+}
+```
+
+Lettergrootte, mijn HTML met gezamenlijke CSS:
+https://github.com/SieuwkeSheta/look-and-feel-corporate-identity/blob/4884ed567f097e869e62d079b00e3c86c7cf3479/index.html#L164
+
+```CSS
+CSS van gezamenlijke styleguide
+  .font-size-heading-s {
+    font-size: var(--font-size-heading-s);
+  }
+```
+
+### Belangrijke aspecten CSS
+De website is *mobile first* gemaakt. De media queries zijn genest in de elementen, waardoor de code overzichtelijker is en de responsiviteit per element makkelijk aan te passen is. Daarnaast gebruik gemaakt van custom properties van de gezamenlijke styleguide.
+
+Genestte media queries en custom properties:
+https://github.com/SieuwkeSheta/look-and-feel-corporate-identity/blob/4884ed567f097e869e62d079b00e3c86c7cf3479/styles/style.css#L149-L163
+
+### Belangrijke aspecten JS
+JS is gebruikt om het hamburgermenu interactief te maken
+
+https://github.com/SieuwkeSheta/look-and-feel-corporate-identity/blob/4884ed567f097e869e62d079b00e3c86c7cf3479/scripts/script.js#L1-L10
+
+
+
 <!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met Javascript gedaan en hoe? Misschien heb je een framwork of library gebruikt? -->
 
 ## Bronnen
+- [What is a style guide and how to create one?](https://www.figma.com/resource-library/what-is-a-style-guide/)
+- [Interface inventory](https://bradfrost.com/blog/post/interface-inventory/)
+- [CSS Custom Properties Guide](https://css-tricks.com/a-complete-guide-to-custom-properties/)
 
 ## Licentie
 
