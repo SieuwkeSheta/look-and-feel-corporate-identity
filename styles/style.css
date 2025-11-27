@@ -652,7 +652,7 @@ footer {
 /* Contact pagina */
 
 .top-contact-page {
-    background-image: url(/assets/person-behind-laptop.jpg);
+    background-image: url(https://sieuwkesheta.github.io/look-and-feel-corporate-identity/assets/person-behind-laptop.jpg);
     background-color: var(--black-color);
     background-repeat: no-repeat;
     background-position:right;
