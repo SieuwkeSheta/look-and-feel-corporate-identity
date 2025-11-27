@@ -79,65 +79,9 @@ nav {
     }
 
     /* Zoekbalk */
-    & [aria-label="zoekbalk"] {
-        margin-left: auto;
-
-        display: flex;
+    & [aria-label="searchbar-ad"] {
         justify-content: end;
-        
-        @media (min-width: 700px) {
-            margin: 1em 2em;
-        }
-    
-        & input {
-            padding-block: 0.9em;
-            border:none;
-            border-radius: 5px;
-            width: 3.25em;
-            padding-left: 3em;
-
-            background-image: url(https://sieuwkesheta.github.io/look-and-feel-corporate-identity/assets/search-icon.svg);
-            background-size: 2em;
-            background-repeat: no-repeat;
-            background-position:.625em center;
-            background-color: transparent;
-            border: 0.15em solid transparent;
-            outline:none;
-
-            @media (prefers-reduced-motion:no-preference) {
-	    	    transition:
-                    background-position .2s .3s ease-in, 
-                    background-size .2s .3s ease-in, 
-                    width .5s;
-	        }
-
-            /* Hover van search-icon */
-            &:hover {
-                border-color: var(--primary-color);
-                transition: none;
-                cursor: pointer;
-            }
-
-            &:focus,
-            &:not(:placeholder-shown) {
-                width: 100%;
-                background-size:1em auto;
-	    	    background-position:.875em center;
-                border-color: var(--primary-color);
-
-                @media (prefers-reduced-motion:no-preference) {
-                    transition:all .3s, width .5s;
-	    	    }
-
-                &:hover {
-                    cursor: text;
-                }
-
-                @media (min-width: 800px) {
-                    max-width: 20em;
-                }
-            }
-        }
+        margin-left: auto;
     }
     
     & button {
@@ -519,10 +463,11 @@ nav {
 
 /* Deelnemende hogescholen sectie op home-pagina */
 .participating-colleges {
-    margin: 4em 0.8em;
+    margin: 4em 0.8em 2em;
 
     & h2 {
         text-align: center;
+        padding-bottom: 0.5em;
 
         @media (min-width: 700px) {
             font-size: var(--font-size-heading-m);
@@ -557,7 +502,7 @@ nav {
     & .carousel {
         display: flex;
         width: 100%;
-        overflow-x: scroll;
+        overflow-x: hidden;
 
         & .carousel-inside {
             list-style: none;
@@ -580,6 +525,10 @@ nav {
                     height: 3em;
                     width: auto;
                     transition: 0.2s;
+
+                    @media (min-width: 800px) {
+                        height: 4em;
+                    }
 
                     &:hover {
                         scale: 1.1;
